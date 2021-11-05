@@ -89,7 +89,7 @@ $irrigationsdrains=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                 DataTable Example
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
+                                <table id="tablaid">
                                     <thead>
                                         <th>id</th>
                                         <th>ph</th>
@@ -139,8 +139,9 @@ $irrigationsdrains=$resultado->fetchAll(PDO::FETCH_ASSOC);
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
         <script>
-            $(document).ready(function(){$('datatablesSimple').DataTable()});
-            
+            $(document).ready(function(){$('tablaid').DataTable();
+            });
+
 
             </script>
     </body>
