@@ -2,7 +2,7 @@
 class Conexion
     public static function Conectar()   {
         define('servidor','localhost');
-        define('Test','TEST1 ');
+        define('Test','proyectocad ');
         define('usuario','root');
         define('password','password');
 
