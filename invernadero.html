@@ -59,7 +59,7 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="row">
+                    <div class="row gy-5">
                         <div class="col-xll-3 col-xl-6"> 
                              <div class="container">
                                 <div class="row justify-content-center">
@@ -165,12 +165,73 @@
                                            <div class="card-footer text-center py-3">
                                                <div class="small">Status</a></div>
                                            </div>
-                                       </div>
+                                           
+                                      
+                                      
+                                      
+                                        </div>
+
+
+                                        
                                    </div>
+
+                                   
                                 </div>
-                         </div>
-                       </div>
+
+                                
+                            </div>
+
+                         
+                        </div>
+          
+                        <div class="col">
+
+                            <div class="container">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Información de los Riegos
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="irrigationDT">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>PH</th>
+                                                    <th>C.E.</th>
+                                                    <th>Volumen 1</th>
+                                                    <th>Volumen 2</th>
+                                                    <th>Tipo</th>
+                                                    <th>Formulario</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>PH</th>
+                                                    <th>C.E.</th>
+                                                    <th>Volumen 1</th>
+                                                    <th>Volumen 2</th>
+                                                    <th>Tipo</th>
+                                                    <th>Formulario</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                             </div>
+                            </div>
+
+
+
+                        </div>
+                       
+    
+                       
                     </div>
+
+                   
                 </main>
             </div>
         </div>        
@@ -291,6 +352,66 @@
                 }
             }
             
+        </script>
+
+        <script>
+            $().ready(function(){
+            $('#irrigationDT').DataTable({
+                    serverSide: true,
+                    ajax: {
+                    url: 'api.php',
+                    method: 'post',
+                    data: {
+                        action: 'getIrrigationData'
+                    }
+                    },
+                    columns: [
+                        { data: 'id' },
+                        { data: 'ph' },
+                        { data: 'ce' },
+                        { data: 'volume1' },
+                        { data: 'volume2' },
+                        {
+                            data: 'type',
+                            render: function(data, row){
+                                var description = "";
+                                switch (data) {
+                                    case 1:
+                                        description = "Riego";
+                                        break;
+                                    case 2:
+                                        description = "Drenaje";
+                                        break;
+                                    default:
+                                        description = "Sin definir";
+                                        break;
+                                }
+                                return description;
+                            }
+                        },
+                        {
+                            data: 'form',
+                            render: function(data, row){
+                                console.log(data);
+                                var formulario = "";
+                                switch (data) {
+                                    case "1":
+                                        formulario = "Formulario 01";
+                                        break;
+                                    case "2":
+                                        formulario = "Formulario 02";
+                                        break;
+                                    default:
+                                        formulario = "Sin definir";
+                                        break;
+                                }
+                                return formulario;
+                            }
+                        }
+                ],
+                searching: false
+            }); 
+            });
         </script>
     </body>
 </html>
