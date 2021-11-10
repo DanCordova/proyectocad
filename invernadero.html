@@ -279,12 +279,16 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
+    
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+
         <script>
             $().ready(function(){
             $('#irrigationDT').DataTable({
                     serverSide: true,
                     ajax: {
-                    url: 'api.php',
+                    url: 'api.php', 
                     method: 'post',
                     data: {
                         action: 'getIrrigationData'
