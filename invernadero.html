@@ -359,64 +359,6 @@
             
         </script>
 
-        <script>
-            $().ready(function(){
-            $('#irrigationDT').DataTable({
-                    serverSide: true,
-                    ajax: {
-                    url: 'api.php',
-                    method: 'post',
-                    data: {
-                        action: 'getIrrigationData'
-                    }
-                    },
-                    columns: [
-                        { data: 'id' },
-                        { data: 'ph' },
-                        { data: 'ce' },
-                        { data: 'volume1' },
-                        { data: 'volume2' },
-                        {
-                            data: 'type',
-                            render: function(data, row){
-                                var description = "";
-                                switch (data) {
-                                    case 1:
-                                        description = "Riego";
-                                        break;
-                                    case 2:
-                                        description = "Drenaje";
-                                        break;
-                                    default:
-                                        description = "Sin definir";
-                                        break;
-                                }
-                                return description;
-                            }
-                        },
-                        {
-                            data: 'form',
-                            render: function(data, row){
-                                console.log(data);
-                                var formulario = "";
-                                switch (data) {
-                                    case "1":
-                                        formulario = "Formulario 01";
-                                        break;
-                                    case "2":
-                                        formulario = "Formulario 02";
-                                        break;
-                                    default:
-                                        formulario = "Sin definir";
-                                        break;
-                                }
-                                return formulario;
-                            }
-                        }
-                ],
-                searching: false
-            }); 
-            });
-        </script>
+       
     </body>
 </html>
