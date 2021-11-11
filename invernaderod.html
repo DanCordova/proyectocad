@@ -289,7 +289,7 @@
             $('#irrigationDT').DataTable({
                     serverSide: true,
                     ajax: {
-                    url: 'api3.php', 
+                    url: 'api4.php', 
                     method: 'post',
                     data: {
                         action: 'getIrrigationData'
@@ -436,7 +436,7 @@
                     formData.append("action", "newIrrigation");
                     $.ajax({
                         async: true,
-                        url: "api3.php",
+                        url: "api4.php",
                         type: "POST",
                         data: formData,
                         processData: false,
