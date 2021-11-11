@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="icon" href="assets/img/tec.png"/>
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Proyecto</title>
+        
+        <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">ProyectoCAD</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Registro de Datos
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Registro</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Gráficas
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tablas  
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="row gy-5">
+                        <div class="col-xll-3 col-xl-6"> 
+                             <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-7">
+                                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Riego</h3></div>
+                                            <div class="card-body">
+                                                <form id="fIrrigation" method="post">
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating mb-3 mb-md-0">
+                                                                <input class="form-control" id="phi" name="ph" type="text" placeholder="PH"/>
+                                                                <label for="phi">PH</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input class="form-control" id="cei" name="ce" type="text" placeholder="C.E" />
+                                                                <label for="cei">C.E</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating mb-3 mb-md-0">
+                                                                <input class="form-control" id="v1i" name="v1" type="text" placeholder="Volumen 1 tubin (ml)" />
+                                                                <label for="v1i">Volumen 1 tubin (ml)</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating mb-3 mb-md-0">
+                                                                <input class="form-control" id="v2i" name="v2" type="text" placeholder="Volumen 2 tubines (ml)" />
+                                                                <label for="v2i">Volumen 2 tubines (ml)</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4 mb-0">
+                                                        <div class="d-grid">
+                                                            <input type="hidden" name="f" value="1" />
+                                                            <input type="hidden" name="t" value="1" />
+                                                            <button id="btnSubmitFI" class="btn btn-primary btn-block" type="submit">Ingresar Datos</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card-footer text-center py-3">
+                                                <div class="small">Status</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="col-xll-3 col-xl-6"> 
+                            <div class="container">
+                               <div class="row justify-content-center">
+                                   <div class="col-lg-7">
+                                       <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                           <div class="card-header"><h3 class="text-center font-weight-light my-4">Drenaje</h3></div>
+                                           <div class="card-body">
+                                               <form id="fDrain" method="post">
+                                                   <div class="row mb-3">
+                                                       <div class="col-md-6">
+                                                           <div class="form-floating mb-3 mb-md-0">
+                                                               <input class="form-control" id="phd" name="ph" type="text" placeholder="PH" />
+                                                               <label for="phd">PH</label>
+                                                           </div>
+                                                       </div>
+                                                       <div class="col-md-6">
+                                                           <div class="form-floating">
+                                                               <input class="form-control" id="ced" name="ce" type="text" placeholder="Enter your last name" />
+                                                               <label for="ced">C.E</label>
+                                                           </div>
+                                                       </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating mb-3 mb-md-0">
+                                                                <input class="form-control" id="v1d" name="v1" type="text" placeholder="Volumen 1 tubin (ml)" />
+                                                                <label for="v1d">Volumen 1 tubin (ml)</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating mb-3 mb-md-0">
+                                                                <input class="form-control" id="v2d" name="v2" type="text" placeholder="Volumen 2 tubines (ml)" />
+                                                                <label for="v2d">Volumen 2 tubines (ml)</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4 mb-0">
+                                                        <div class="d-grid">
+                                                            <input type="hidden" name="f" value="2" />
+                                                            <input type="hidden" name="t" value="2" />
+                                                            <button id="btnSubmitFD" class="btn btn-primary btn-block" type="submit">Ingresar Datos</button>
+                                                        </div>
+                                                    </div>
+                                               </form>
+                                           </div>
+                                           <div class="card-footer text-center py-3">
+                                               <div class="small">Status</a></div>
+                                           </div>                                        
+                            
+                                        </div>                                        
+                                   </div>                                   
+                                </div>                                
+                            </div>
+                        </div>
+          
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="col">
+                            <div class="container">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Información de los Riegos
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="irrigationDT">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>PH</th>
+                                                    <th>C.E.</th>
+                                                    <th>Volumen 1</th>
+                                                    <th>Volumen 2</th>
+                                                    <th>Tipo</th>
+                                                    <th>Formulario</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>PH</th>
+                                                    <th>C.E.</th>
+                                                    <th>Volumen 1</th>
+                                                    <th>Volumen 2</th>
+                                                    <th>Tipo</th>
+                                                    <th>Formulario</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                             </div>
+                            </div>
+
+
+
+                        </div>
+                       
+    
+                       
+                    </div>
+
+                   
+                </main>
+            </div>
+        </div>        
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+    
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+
+        <script>
+            $().ready(function(){
+            $('#irrigationDT').DataTable({
+                    serverSide: true,
+                    ajax: {
+                    url: 'api3.php', 
+                    method: 'post',
+                    data: {
+                        action: 'getIrrigationData'
+                    }
+                    },
+                    columns: [
+                        { data: 'id' },
+                        { data: 'ph' },
+                        { data: 'ce' },
+                        { data: 'volume1' },
+                        { data: 'volume2' },
+                        {
+                            data: 'type',
+                            render: function(data, row){
+                                var description = "";
+                                switch (data) {
+                                    case 1:
+                                        description = "Riego";
+                                        break;
+                                    case 2:
+                                        description = "Drenaje";
+                                        break;
+                                    default:
+                                        description = "Sin definir";
+                                        break;
+                                }
+                                return description;
+                            }
+                        },
+                        {
+                            data: 'form',
+                            render: function(data, row){
+                                console.log(data);
+                                var formulario = "";
+                                switch (data) {
+                                    case "1":
+                                        formulario = "Formulario 01";
+                                        break;
+                                    case "2":
+                                        formulario = "Formulario 02";
+                                        break;
+                                    default:
+                                        formulario = "Sin definir";
+                                        break;
+                                }
+                                return formulario;
+                            }
+                        }
+                ],
+                searching: false
+            }); 
+            });
+        </script>
+
+
+        <script>
+            var fIrrigationValidator;
+            var fDrainValidator;
+
+            $().ready(function () {
+                $("#btnSubmitFI").on("click", function (event) {
+                    event.preventDefault();
+                    SendFormData("fIrrigation");
+                });
+                $("#btnSubmitFD").on("click", function (event) {
+                    event.preventDefault();
+                    SendFormData("fDrain");
+                });
+                fIrrigationValidator = $("#fIrrigation").validate({
+                    rules: {
+                        ph: {
+                            required: true
+                        },
+                        ce: {
+                            required: true
+                        },
+                        v1: {
+                            required: true
+                        },
+                        v2: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        ph: {
+                            required: 'PH necesario'
+                        },
+                        ce: {
+                            required: 'C.E. necesario'
+                        },
+                        v1: {
+                            required: 'Volumen 1 tubin (ml) necesario'
+                        },
+                        v2: {
+                            required: 'Volumen 2 tubines (ml) necesario'
+                        }
+                    }
+                });
+                
+                fDrainValidator = $("#fDrain").validate({
+                    rules: {
+                        ph: {
+                            required: true
+                        },
+                        ce: {
+                            required: true
+                        },
+                        v1: {
+                            required: true
+                        },
+                        v2: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        ph: {
+                            required: 'PH necesario'
+                        },
+                        ce: {
+                            required: 'C.E. necesario'
+                        },
+                        v1: {
+                            required: 'Volumen 1 tubin (ml) necesario'
+                        },
+                        v2: {
+                            required: 'Volumen 2 tubines (ml) necesario'
+                        }
+                    }
+                });
+            });
+
+            function SendFormData(formName){
+                var validData = false;
+                switch(formName){
+                    case "fIrrigation":
+                        validData = fIrrigationValidator.form();
+                        break;
+                    case "fDrain":
+                        validData = fDrainValidator.form();
+                        break;
+                }
+                if (validData) {
+                    var formData = new FormData(document.getElementById(formName));
+                    formData.append("action", "newIrrigation");
+                    $.ajax({
+                        async: true,
+                        url: "api3.php",
+                        type: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        dataType: "json",
+                        success: function (response) {
+                            if (response.Id != undefined) {
+                                alert("Se registro exitosamente la información.");
+                                $("#" + formName)[0].reset();
+                            } else {
+                                alert("Error: " + response.Detail);
+                            }
+                        },
+                        error: function (a, b, c) {
+                            alert("Ocurrio un error. Intentelo nuevamente mas tarde.");
+                        }
+                    });
+                }
+            }
+            
+        </script>
+  
+
+    
+      
+
+       
+    </body>
+</html>
