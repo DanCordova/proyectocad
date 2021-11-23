@@ -4,7 +4,7 @@ class DatabaseConnector{
     private $connection = null;
 
     // this function is called everytime this class is instantiated
-    public function __construct($dbhost = "localhost", $dbname = "proyectocad3", $username = "root", $password = "") {
+    public function __construct($dbhost = "localhost", $dbname = "proyectocad2", $username = "root", $password = "") {
         try {
             $this->connection = new mysqli($dbhost, $username, $password, $dbname);		
             if(mysqli_connect_errno()) {
