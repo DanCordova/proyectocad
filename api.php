@@ -23,7 +23,6 @@
                     $volume2 = $_POST["v2"];
                     $type = $_POST["t"];
                     $form = $_POST["f"];
-                    
                     $irrigationId = $dbConnection->Insert(
                         "INSERT INTO irrigationsdrains(ph, ce, volume1, volume2, type, form) values(?, ?, ?, ?, ?, ?)",
                         [
