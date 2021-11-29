@@ -7,7 +7,7 @@
         <link rel="icon" href="assets/img/tec.png"/>
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Invernadero Alfa</title>
+        <title>Invernadero Beta</title>
         
         <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
 
 
 
-        <!-- Contenedores del menu lateral de la pagina web-->
+
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -68,13 +68,9 @@
 
 
 
-            
+
             <div id="layoutSidenav_content">
                 <main>
-                    <!-- Formulario de datos de Riego 
-                         Clase Row nos permite organizar el formulario 
-                        
-                    -->
                     <div class="row gy-5">
                         <div class="col-xll-3 col-xl-6"> 
                              <div class="container">
@@ -123,6 +119,9 @@
                                                     </div>
                                                 </form>
                                             </div>
+                                            <div class="card-footer text-center py-3">
+                                                <div class="small">Status</a></div>
+                                            </div>
                                         </div>
                                     </div>
                                  </div>
@@ -142,11 +141,8 @@
 
 
 
-                    
-                    
-                    <!-- Formulario de datos de Drenaje  
-                         Clase Row nos permite organizar el formulario 
-                    -->
+
+
                         <div class="col-xll-3 col-xl-6"> 
                             <div class="container">
                                <div class="row justify-content-center">
@@ -214,8 +210,7 @@
 
 
 
-                    <!-- Tabla de los datos del primer invernadero                         
-                    -->
+
                         <div class="col">
                             <div class="container">
                                 <div class="card mb-4">
@@ -276,11 +271,6 @@
         <script src="js/scripts.js"></script>
         <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 
-
-
-
-        <!-- Script para generar la tablas de riego 
-                    -->
         <script>
             $().ready(function(){
             $('#irrigationDT').DataTable({
@@ -341,9 +331,7 @@
             });
         </script>
 
-        <!-- Script para generar las tablas  
 
-                    -->
         <script>
             var fIrrigationValidator;
             var fDrainValidator;
